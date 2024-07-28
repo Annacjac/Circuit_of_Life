@@ -24,4 +24,6 @@ public class PowerSource : MonoBehaviour
     void SplitPower(int numWires){
         wattagePerOutlet = totalWattage/numWires;
     }
+
+    //void spawn 
 }

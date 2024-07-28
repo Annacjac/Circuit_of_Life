@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 22e99cc22b9bcc344ae799a66bd97cb4
+guid: 55e98d021636253408a1b1af26b90a8a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,34 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: light_on_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f24358b187be0bb48bce3767e3bd0300
-      internalID: -1615054331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: light_on_1
+      name: pixil-frame-0 (75)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ded25c999c4a06148ad30efd6def1fba
-      internalID: 427151134
+      spriteID: 79b0cdf0d0062be4785d6442e586cfca
+      internalID: -1703269237
       vertices: []
       indices: 
       edges: []
@@ -188,8 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      light_on_0: -1615054331
-      light_on_1: 427151134
+      pixil-frame-0 (75)_0: -1703269237
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
