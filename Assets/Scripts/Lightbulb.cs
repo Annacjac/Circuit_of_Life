@@ -44,7 +44,7 @@ public class Lightbulb : MonoBehaviour
 
     void DetectWire(){
         bool wireFound = false;
-        if(wiring.SearchAllWires(connectionCell)){
+        if(wiring.tileMap.HasTile(connectionCell)){
             Debug.Log(true);
             for(int i = 2; i < 10; i++){
                 if(wiring.tileMap.GetTile(connectionCell) == wiring.redWires[i] || 

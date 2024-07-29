@@ -5,21 +5,30 @@ using UnityEngine.Tilemaps;
 
 public class WirePath : MonoBehaviour
 {
-    public ArrayList path;
+    public List<Vector3Int> path;
     public string color;
     public bool soldered;
     public bool active;
+    //public Wiring wiring;
 
-    public WirePath(string color){
-        this.color = color;
+    public WirePath()
+    {
+        // Ensure path is initialized here if needed
+        path = new List<Vector3Int>();
     }
 
+    // Awake is called when the script instance is being loaded
+    void Awake()
+    {
+        path = new List<Vector3Int>();
+        soldered = false;
+        active = true;
+        color = "red";
+    }
     // Start is called before the first frame update
     void Start()
     {
-        path = new ArrayList();
-        soldered = false;
-        active = true;
+
     }
 
     // Update is called once per frame
@@ -27,4 +36,8 @@ public class WirePath : MonoBehaviour
     {
         
     }
+
+    // void DrawPath(Vector3Int targetTile, ){
+
+    // }
 }
