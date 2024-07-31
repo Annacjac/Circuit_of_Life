@@ -7,20 +7,23 @@ public class Lightbulb : MonoBehaviour
 {
     private bool isOn;
     public Vector3Int lightPosition;
-    public GridLayout grid;
-    public Wiring wiring;
     private Vector3Int connectionCell;
     public Sprite[] lightSprites;
     public SpriteRenderer upperSprite;
     public SpriteRenderer lowerSprite;
+    public ObjectsAndData data;
+
+
     
     // Start is called before the first frame update
     void Start()
     {
+        data = GameObject.Find("Data").GetComponent<ObjectsAndData>();
         isOn = false;
-        lightPosition = grid.WorldToCell(transform.GetChild(1).position);
+        lightPosition = data.grid.WorldToCell(transform.GetChild(1).position);
         connectionCell = new Vector3Int(lightPosition.x, lightPosition.y - 1, 0);
         Debug.Log(connectionCell);
+        
     }
 
     // Update is called once per frame
@@ -44,13 +47,13 @@ public class Lightbulb : MonoBehaviour
 
     void DetectWire(){
         bool wireFound = false;
-        if(wiring.tileMap.HasTile(connectionCell)){
-            Debug.Log(true);
+        if(data.wiringMap1.HasTile(connectionCell)){
+            //Debug.Log(true);
             for(int i = 2; i < 10; i++){
-                if(wiring.tileMap.GetTile(connectionCell) == wiring.redWires[i] || 
-                    wiring.tileMap.GetTile(connectionCell) == wiring.yellowWires[i] ||
-                    wiring.tileMap.GetTile(connectionCell) == wiring.greenWires[i] ||
-                    wiring.tileMap.GetTile(connectionCell) == wiring.blueWires[i]){
+                if(data.wiringMap1.GetTile(connectionCell) == data.wiring.redWires[i] || 
+                    data.wiringMap1.GetTile(connectionCell) == data.wiring.yellowWires[i] ||
+                    data.wiringMap1.GetTile(connectionCell) == data.wiring.greenWires[i] ||
+                    data.wiringMap1.GetTile(connectionCell) == data.wiring.blueWires[i]){
                     wireFound = true;
                     break;
                 }
@@ -65,6 +68,10 @@ public class Lightbulb : MonoBehaviour
         else{
             TurnOff();
         }
+    }
+
+    public bool GetIsOn(){
+        return isOn;
     }
 
 }
